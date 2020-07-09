@@ -1,0 +1,108 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "OpenWeatherRequest": [
+                {
+                    "name": "John",
+                    "lastName": "Smith",
+                    "dateTime": "31012019T2000Z",
+                    "city": "Melbourne",
+                    "country": "Australia"
+                }
+            ]
+        }
+    ],
+  
+    "additionalProperties": false,
+    "properties": {
+        "OpenWeatherRequest": {
+            "$id": "#/properties/OpenWeatherRequest",
+            "type": "array",
+            "title": "The OpenWeatherRequest schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    {
+                        "name": "John",
+                        "lastName": "Smith",
+                        "dateTime": "31012019T2000Z",
+                        "city": "Melbourne",
+                        "country": "Australia"
+                    }
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "anyOf": [
+                    {
+                        "$id": "#/properties/OpenWeatherRequest/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "additionalProperties": true,
+                        "properties": {
+                            "name": {
+                                "$id": "#/properties/OpenWeatherRequest/items/anyOf/0/properties/name",
+                                "type": "string",
+                                "title": "The name schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "John"
+                                ]
+                            },
+                            "lastName": {
+                                "$id": "#/properties/OpenWeatherRequest/items/anyOf/0/properties/lastName",
+                                "type": "string",
+                                "title": "The lastName schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Smith"
+                                ]
+                            },
+                            "dateTime": {
+                                "$id": "#/properties/OpenWeatherRequest/items/anyOf/0/properties/dateTime",
+                                "type": "string",
+                                "title": "The dateTime schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "31012019T2000Z"
+                                ]
+                            },
+                            "city": {
+                                "$id": "#/properties/OpenWeatherRequest/items/anyOf/0/properties/city",
+                                "type": "string",
+                                "title": "The city schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Melbourne"
+                                ]
+                            },
+                            "country": {
+                                "$id": "#/properties/OpenWeatherRequest/items/anyOf/0/properties/country",
+                                "type": "string",
+                                "title": "The country schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Australia"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "$id": "#/properties/OpenWeatherRequest/items"
+            }
+        }
+    }
+}

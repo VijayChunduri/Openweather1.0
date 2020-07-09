@@ -1,0 +1,14 @@
+{  
+  "OpenWeatherResponse":
+    {      
+      "name": "John" ,
+      "lastName":"Smith",
+      "fullName": "John Smith",
+      "datetime": "2020-01-01 10:00:01" ,
+      "temperatureCelcius": 0,
+      "offset": " ",
+      "city": "Melbourne",
+      "location": "Australia",
+      "timeZone": " "   
+     }
+}
